@@ -11,10 +11,7 @@ var permuteStrings = function(str1, str2){
   let chars1 = str1.split('');
   let chars2 = str2.split('');
 
-  const checkfunc = (sum, charval) => sum + charval.charCodeAt(0);
-  chars1 = chars1.reduce(checkfunc,0);
-  chars2 = chars2.reduce(checkfunc,0);
-  return chars1 === chars2;
+  return chars1.sort().join() === chars2.sort().join();
 }
 
 
